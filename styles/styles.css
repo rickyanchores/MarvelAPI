@@ -2,4 +2,8 @@ body {
   font-family: monospace;
   background: black;
   color: whitesmoke;
+}
+
+img {
+  width: 300px;
 }/*# sourceMappingURL=styles.css.map */
