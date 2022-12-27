@@ -9,9 +9,12 @@ async function getCharacters() {
   const data = await response.json()
   console.log(data)
 
-  const image = `${data.data.results[7].thumbnail.path}.${data.data.results[7].thumbnail.extension}`
 
-  result.innerHTML = `<p>hero name: ${data.data.results[7].name}</p>
+  let num = "2"
+  const name = `${data.data.results[num].name}`
+  const image = `${data.data.results[num].thumbnail.path}.${data.data.results[num].thumbnail.extension}`
+
+  result.innerHTML = `<p>${name}</p>
                       <img src="${image}"/>` 
 }
 
