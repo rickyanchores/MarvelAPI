@@ -1,18 +1,13 @@
 let result = document.querySelector(".result")
 
 
-async function getData(){
-    let url ="http(s)://gateway.marvel.com/"
-    const API_KEY = "69af5f3159ff0070dad5481146157688"
 
-    fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data)
-        })
-        .catch((err) => {
-            console.log("Error", err)
-        })
+const API_KEY = "69af5f3159ff0070dad5481146157688";
+
+async function getCharacters() {
+  const response = await fetch(`https://gateway.marvel.com/v1/public/characters?apikey=${API_KEY}`);
+  const data = await response.json();
+  console.log(data);
 }
 
-getData()
+getCharacters();
